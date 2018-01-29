@@ -1,19 +1,23 @@
 package com.jsf2184.collections;
 
 public class Node<D> {
-    Node<D> _prev;
-    D _data;
+    private Node<D> _next;
+    private D _data;
 
-    public Node(D data, Node<D> prev) {
+    Node(D data, Node<D> next) {
         _data = data;
-        _prev = prev;
+        _next = next;
     }
 
     public D getData() {
         return _data;
     }
 
-    public Node<D> getPrev() {
-        return _prev;
+    public Node<D> getNext() {
+        return _next;
+    }
+
+    void setNext(Node<D> next) {
+        _next = next;
     }
 }

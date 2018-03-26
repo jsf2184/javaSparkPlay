@@ -26,6 +26,14 @@ public class QuickSort {
         return res;
 
     }
+
+    // Here we are working with a particular segment of the array beginning at 'start' with length: 'length'.
+    // We want to zero in on the last element of this segment and re-position it so that all elements to its left
+    // are smaller than it, and all elements to its right are larger than it. We call this value the pivot.
+    // The method returns the new position of the pivot. Note that after the method has returned, the values
+    // in the two halves partitioned by the pivot are not sorted. However, the left ones are all less than the
+    // pivot and the right ones are all greater.
+    //
     public static int partition(int[] array, int start, int length) {
         int pivotIdx = start+length-1;
         int pivot = array[pivotIdx];
